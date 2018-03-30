@@ -1,0 +1,52 @@
+{
+    "name": "multilingualhints",
+    "displayName": "MultilingualHints",
+    "description": "Multilingual Hints",
+    "version": "1.0.1",
+    "publisher": "MultilingualHints",
+    "engines": {
+        "vscode": "^1.21.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:javascript",
+        "onLanguage:html"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "configuration": {
+            "type": "object",
+            "title": "multilingualhints configuration",
+            "properties": {
+                "multilingualhints.prefix": {
+                    "type": "string",
+                    "default": "ATMS_",
+                    "description": "多语言前缀",
+                    "scope": "resource"
+                },
+                "multilingualhints.configFile": {
+                    "type": "string",
+                    "default": "\\js\\language\\menu_zh.json",
+                    "description": "多语言文件地址",
+                    "scope": "resource"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "tslint": "^5.8.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
