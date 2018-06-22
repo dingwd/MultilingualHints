@@ -1,0 +1,14 @@
+{
+    ".source.Multilingual": {
+        "multilingual import": {
+            "prefix": "lang",
+            "body": "'$1' | translate",
+            "description": "多语言输入"
+        },
+        "multilingual import2": {
+            "prefix": "langg",
+            "body": "{{'$1' | translate}}",
+            "description": "多语言输入"
+        }
+    }
+}

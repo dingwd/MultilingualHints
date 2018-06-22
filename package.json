@@ -2,8 +2,12 @@
     "name": "multilingualhints",
     "displayName": "MultilingualHints",
     "description": "Multilingual Hints",
-    "version": "1.0.1",
+    "version": "1.0.6",
     "publisher": "MultilingualHints",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/dingwd/MultilingualHints.git"
+    },
     "engines": {
         "vscode": "^1.21.0"
     },
@@ -20,15 +24,9 @@
             "type": "object",
             "title": "multilingualhints configuration",
             "properties": {
-                "multilingualhints.prefix": {
-                    "type": "string",
-                    "default": "ATMS_",
-                    "description": "多语言前缀",
-                    "scope": "resource"
-                },
                 "multilingualhints.configFile": {
                     "type": "string",
-                    "default": "\\js\\language\\menu_zh.json",
+                    "default": "\\src\\assets\\i18n\\zh_CN.json",
                     "description": "多语言文件地址",
                     "scope": "resource"
                 }
@@ -48,5 +46,11 @@
         "tslint": "^5.8.0",
         "@types/node": "^7.0.43",
         "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "@types/lodash": "^4.14.110",
+        "lodash": "^4.17.10",
+        "vscode-languageclient": "~4.2.1",
+        "vscode-jsonrpc": "~3.6.0"
     }
 }

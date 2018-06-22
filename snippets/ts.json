@@ -1,0 +1,9 @@
+{
+    ".source.Multilingual": {
+        "multilingual import": {
+            "prefix": "lang",
+            "body": "this.appData.getLang('$1')",
+            "description": "多语言输入"
+        }
+    }
+}
